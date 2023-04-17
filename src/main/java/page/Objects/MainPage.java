@@ -1,4 +1,4 @@
-package PageObjects;
+package page.Objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,8 +23,17 @@ public class MainPage {
     private By questions = By.className("accordion__button");
     //ответы
     private By answers = By.className("accordion__panel");
+    //Локаторы открытия вопросов
+    private static By question1 = By.id("accordion__heading-0");
+    private static By question2 = By.id("accordion__heading-1");
+    private static By question3 = By.id("accordion__heading-2");
+    private static By question4 = By.id("accordion__heading-3");
+    private static By question5 = By.id("accordion__heading-4");
+    private static By question6 = By.id("accordion__heading-5");
+    private static By question7 = By.id("accordion__heading-6");
+    private static By question8 = By.id("accordion__heading-7");
     //массив локаторов кнопок с вопросами
-    private static final String[] dropDownQuestions = new String[]{
+    public static final String[] dropDownQuestions = new String[]{
             "accordion__heading-0",
             "accordion__heading-1",
             "accordion__heading-2",
@@ -32,10 +41,19 @@ public class MainPage {
             "accordion__heading-4",
             "accordion__heading-5",
             "accordion__heading-6",
-            "accordion__heading-7"
+            "accordion__heading-7",
     };
+    //Локаторы элементов с текстом ответов
+    private static By answer1 = By.className("accordion__panel-0");
+    private static By answer2 = By.className("accordion__panel-1");
+    private static By answer3 = By.className("accordion__panel-2");
+    private static By answer4 = By.className("accordion__panel-3");
+    private static By answer5 = By.className("accordion__panel-4");
+    private static By answer6 = By.className("accordion__panel-5");
+    private static By answer7 = By.className("accordion__panel-6");
+    private static By answer8 = By.className("accordion__panel-7");
     //Массив локаторов кнопок с ответами
-    private static final String[] dropDownAnswers = new String[]{
+    public static final String[] dropDownAnswers = new String[]{
             "accordion__panel-0",
             "accordion__panel-1",
             "accordion__panel-2",
@@ -43,7 +61,7 @@ public class MainPage {
             "accordion__panel-4",
             "accordion__panel-5",
             "accordion__panel-6",
-            "accordion__panel-7"
+            "accordion__panel-7",
     };
     //Методы
     //метод принятия куки
