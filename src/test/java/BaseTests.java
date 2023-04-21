@@ -24,7 +24,7 @@ public class BaseTests {
         //driver = new FirefoxDriver();
        //Переход на страницу
         driver.get("https://qa-scooter.praktikum-services.ru/");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
     @After
     public void tearDown() {

@@ -1,4 +1,4 @@
-package PageObjects;
+package page.Objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -78,5 +78,12 @@ public class RentForm {
     //Появление кнопки "Посмотреть статус" в модальном окне
     public boolean isStatusButtonDisplayed() {
         return driver.findElement(checkStatus).isDisplayed();
+    }
+    //Метод заполнения данных о заказе
+    public void fillRentForm(String date, String massage){
+        fillDeliveryTime(date);
+        fillRentTime();
+        choseBlackScooter();
+        fillMassageForCourier(massage);
     }
 }

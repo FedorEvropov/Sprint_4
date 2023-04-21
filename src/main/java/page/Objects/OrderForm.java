@@ -1,4 +1,4 @@
-package PageObjects;
+package page.Objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -48,5 +48,14 @@ public class OrderForm {
     //Нажать "Далее"
     public void clickNext(){
         driver.findElement(buttonNext).click();
+    }
+    //Метод заполнения личных данных
+    public void fillProfile(String firstName, String lastName, String adress, String metroStation, String phone){
+        fillFirstName(firstName);
+        fillLastname(lastName);
+        fillAdress(adress);
+        choseMetro(metroStation);
+        fillPhone(phone);
+        clickNext();
     }
 }
